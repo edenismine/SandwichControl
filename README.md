@@ -1,5 +1,6 @@
 # SandwichControl
 
+![logo](/icons/myApp.svg)
 
 ![apm](https://img.shields.io/apm/l/vim-mode.svg)
 
