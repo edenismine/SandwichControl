@@ -1,0 +1,274 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url("/fonts/OpenSans-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url("/fonts/OpenSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal; }
+.text {
+  -fx-font-smoothing-type: gray; }
+
+.clipped {
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px; }
+
+.welcome-screen {
+  -fx-background-color: #FFF; }
+
+.header-pane {
+  -fx-padding: 20px 0 20px 0;
+  -fx-background-color: #DDD;
+  -fx-alignment: top-center; }
+
+.header-title {
+  -fx-text-fill: #667777;
+  -fx-font-family: "Open Sans Light";
+  -fx-font-size: 35px; }
+
+.restaurant-button-bar {
+  -fx-spacing: 20px;
+  -fx-alignment: top-center;
+  -fx-padding: 20px;
+  -fx-pref-height: 100px;
+  -fx-max-height: 140px; }
+  .restaurant-button-bar .button {
+    -fx-font-family: "Open Sans";
+    -fx-font-size: 14px;
+    -fx-text-fill: #EEE;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-color: transparent;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px; }
+    .restaurant-button-bar .button:hover {
+      -fx-font-weight: bolder; }
+    .restaurant-button-bar .button:armed {
+      -fx-font-size: 16px; }
+  .restaurant-button-bar #button01 {
+    -fx-background-image: url("/restaurants/restaurant01.png"); }
+  .restaurant-button-bar #button02 {
+    -fx-background-image: url("/restaurants/restaurant02.png"); }
+  .restaurant-button-bar #button03 {
+    -fx-background-image: url("/restaurants/restaurant03.png"); }
+  .restaurant-button-bar #button04 {
+    -fx-background-image: url("/restaurants/restaurant04.png"); }
+
+.dashboard {
+  -fx-border-width: 15px;
+  -fx-border-color: #FFF;
+  -fx-spacing: 15px;
+  -fx-background-radius: 15px; }
+  .dashboard .text {
+    -fx-text-fill: #667777; }
+
+.dashboard-item {
+  -fx-border-width: 15px;
+  -fx-border-color: #DDD;
+  -fx-padding: 15px;
+  -fx-min-width: 200px;
+  -fx-background-color: white;
+  -fx-background-insets: 10px;
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px; }
+
+.cell {
+  -fx-alignment: center; }
+
+.store-balance {
+  -fx-font-family: "Open Sans Semibold";
+  -fx-text-fill: #667777; }
+
+.store-address {
+  -fx-font-family: "Open Sans Light";
+  -fx-text-fill: #667777;
+  -fx-font-style: italic; }
+
+.total-balance {
+  -fx-font-family: "Open Sans Semibold";
+  -fx-font-size: 22px;
+  -fx-text-fill: #74c127; }
+
+.big-label {
+  -fx-font-family: "Open Sans Semibold";
+  -fx-font-size: 14px;
+  -fx-text-fill: #667777;
+  -fx-padding: -10px 0 0 0; }
+
+.green-button {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+  -fx-background-color: #a7e26c; }
+  .green-button:hover {
+    -fx-background-color: #8dd941; }
+  .green-button:armed {
+    -fx-background-color: #74c127; }
+
+.back-button {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+  -fx-background-color: #e15a64; }
+  .back-button:hover {
+    -fx-background-color: #d92f3b; }
+  .back-button:armed {
+    -fx-background-color: #b4212b; }
+
+.table-view {
+  -fx-padding: 0px;
+  -fx-font-family: "Open Sans"; }
+
+.table-view .column-header-background {
+  -fx-background-color: #DDD; }
+
+.table-view .column-header-background .label {
+  -fx-background-color: transparent;
+  -fx-text-fill: #EEE; }
+
+.table-view .column-header {
+  -fx-background-radius: 15px 15px 0 0;
+  -fx-border-radius: 15px 15px 0 0;
+  -fx-background-color: #52b8cc; }
+
+.table-view .filler {
+  -fx-background-color: transparent; }
+
+.store-panel {
+  -fx-background-color: white; }
+
+.store-menu-items {
+  -fx-alignment: top-center;
+  -fx-text-alignment: center;
+  -fx-padding: 20px 0;
+  -fx-label-padding: 10px; }
+  .store-menu-items .toggle-button {
+    -fx-text-fill: #444;
+    -fx-font-size: 10px;
+    -fx-font-family: "Open Sans";
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-min-width: 100px;
+    -fx-min-height: 75px;
+    -fx-max-width: 100px;
+    -fx-max-height: 75px;
+    -fx-alignment: center;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: #ffe853; }
+    .store-menu-items .toggle-button:hover {
+      -fx-background-color: #ffcc33; }
+    .store-menu-items .toggle-button:armed {
+      -fx-font-size: 11px;
+      -fx-background-color: #e6ba2c; }
+    .store-menu-items .toggle-button:selected {
+      -fx-font-size: 11px;
+      -fx-background-color: #ffcc33;
+      -fx-border-color: #ffd966;
+      -fx-border-width: 2px;
+      -fx-border-radius: 13px; }
+
+.sandwich-builder-wrapper {
+  -fx-background-color: white;
+  -fx-alignment: top-center; }
+
+.sandwich-builder-button-grid {
+  -fx-alignment: center;
+  -fx-hgap: 10px;
+  -fx-vgap: 10px; }
+
+.add-ingredient-button {
+  -fx-min-width: 150px;
+  -fx-max-width: 150px;
+  -fx-min-height: 30px;
+  -fx-max-height: 30px; }
+
+.ingredient {
+  -fx-background-color: #73d2e6; }
+  .ingredient:hover {
+    -fx-background-color: #52b8cc; }
+  .ingredient:armed {
+    -fx-background-color: #39abbf; }
+
+.bread {
+  -fx-background-color: #ffe853; }
+  .bread:hover {
+    -fx-background-color: #ffcc33; }
+  .bread:armed {
+    -fx-background-color: #e6ba2c; }
+
+.sandwich-ingredient-graphic {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 10px;
+  -fx-text-fill: #667777;
+  -fx-spacing: 5px;
+  -fx-alignment: center;
+  -fx-text-alignment: left;
+  -fx-wrap-text: true; }
+
+.sandwich-builder-ingredients-header {
+  -fx-font-family: "Open Sans Semibold";
+  -fx-font-size: 14px;
+  -fx-text-fill: #667777;
+  -fx-alignment: center;
+  -fx-padding: 15px; }
+
+.sandwich-builder-ingredients {
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px;
+  -fx-font-family: "Open Sans";
+  -fx-background-insets: 0px;
+  -fx-padding: 0px;
+  -fx-alignment: center;
+  -fx-pref-width: 900px;
+  -fx-pref-height: 900px; }
+
+.ingredient-list-item {
+  -fx-background-color: transparent; }
+
+.ingredient-list-item-ingredient {
+  -fx-background-color: transparent; }
+  .ingredient-list-item-ingredient:filled:hover {
+    -fx-background-color: #e15a64; }
+
+.builder-input-wrapper {
+  -fx-padding: 0px;
+  -fx-min-width: 400px;
+  -fx-max-width: 400px;
+  -fx-min-height: 500px;
+  -fx-max-height: 500px; }
+
+.builder-output-wrapper {
+  -fx-padding: 0px;
+  -fx-min-width: 450px;
+  -fx-max-width: 450px;
+  -fx-min-height: 500px;
+  -fx-max-height: 500px; }
+
+.list-view .list-cell {
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px; }
+  .list-view .list-cell:odd {
+    -fx-background-color: #fcfcfc; }
+  .list-view .list-cell:even {
+    -fx-background-color: #f9f9f9; }
+  .list-view .list-cell:empty {
+    -fx-background-color: transparent; }
+.list-view .scroll-bar:vertical {
+  -fx-padding: 0px;
+  -fx-scale-x: 0; }
+  .list-view .scroll-bar:vertical .increment-arrow,
+  .list-view .scroll-bar:vertical .decrement-arrow,
+  .list-view .scroll-bar:vertical .increment-button,
+  .list-view .scroll-bar:vertical .decrement-button {
+    -fx-padding: 0px;
+    -fx-scale-x: 0; }
+
+/*# sourceMappingURL=styles.css.map */

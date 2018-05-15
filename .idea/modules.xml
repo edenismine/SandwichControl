@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SandwichControl.iml" filepath="$PROJECT_DIR$/.idea/modules/SandwichControl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SandwichControl_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SandwichControl_main.iml" group="SandwichControl" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SandwichControl_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SandwichControl_test.iml" group="SandwichControl" />
+    </modules>
+  </component>
+</project>

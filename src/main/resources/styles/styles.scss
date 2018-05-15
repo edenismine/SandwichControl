@@ -1,0 +1,410 @@
+$green-primary: #8dd941;
+$green-lighter: lighten($green_primary, 10%);
+$green-darker: darken($green_primary, 10%);
+$red-primary: #d92f3b;
+$red-lighter: lighten($red-primary, 10%);
+$red-darker: darken($red-primary, 10%);
+$yellow-lighter: #ffe853;
+$yellow-primary: #ffcc33;
+$yellow-darker: #e6ba2c;
+$blue-lighter: #73d2e6;
+$blue-primary: #52b8cc;
+$blue-darker: #39abbf;
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Semibold';
+  src: url("/fonts/OpenSans-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url("/fonts/OpenSans-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin top-left {
+  -fx-alignment: top-left;
+}
+
+@mixin narrow-spacing {
+  -fx-spacing: 10px;
+}
+
+@mixin normal-spacing {
+  -fx-spacing: 15px;
+}
+
+@mixin wide-spacing {
+  -fx-spacing: 20px;
+}
+
+@mixin border-rounded {
+  -fx-border-radius: 15px;
+}
+
+@mixin rounded-background {
+  -fx-background-radius: 15px;
+}
+
+@mixin bottom-right {
+  -fx-alignment: bottom-right;
+}
+
+@mixin strict-size-region($width, $height) {
+  -fx-min-width: $width;
+  -fx-max-width: $width;
+  -fx-min-height: $height;
+  -fx-max-height: $height;
+}
+
+@mixin dark-text {
+  -fx-text-fill: #444;
+}
+
+@mixin gray-text {
+  -fx-text-fill: #667777;
+}
+
+@mixin light-text {
+  -fx-text-fill: #EEE;
+}
+
+@mixin small-text {
+  -fx-font-size: 10px;
+}
+
+@mixin medium-text {
+  -fx-font-size: 12px;
+}
+
+@mixin big-text {
+  -fx-font-size: 14px;
+}
+
+@mixin bigger-text {
+  -fx-font-size: 22px;
+}
+
+@mixin remove-javafx-border {
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+}
+
+.text {
+  -fx-font-smoothing-type: gray;
+}
+
+.clipped {
+  @include border-rounded;
+  @include rounded-background;
+}
+
+@mixin clip {
+  @include border-rounded;
+  @include rounded-background;
+}
+
+.welcome-screen {
+  -fx-background-color: #FFF;
+}
+
+.header-pane {
+  -fx-padding: 20px 0 20px 0;
+  -fx-background-color: #DDD;
+  -fx-alignment: top-center;
+}
+
+.header-title {
+  @include gray-text;
+  -fx-font-family: "Open Sans Light";
+  -fx-font-size: 35px;
+}
+
+.restaurant-button-bar {
+  @include wide-spacing;
+  -fx-alignment: top-center;
+  -fx-padding: 20px;
+  -fx-pref-height: 100px;
+  -fx-max-height: 140px;
+  .button {
+    -fx-font-family: "Open Sans";
+    @include big-text;
+    @include light-text;
+    @include rounded-background;
+    @include border-rounded;
+    -fx-background-color: transparent;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px;
+    &:hover {
+      -fx-font-weight: bolder;
+    }
+    &:armed {
+      -fx-font-size: 16px;
+    }
+  }
+  $class-slug: button !default;
+  @for $i from 1 through 4 {
+    ##{$class-slug}0#{$i} {
+      -fx-background-image: url("/restaurants/restaurant0#{$i}.png");
+    }
+  }
+}
+
+.dashboard {
+  -fx-border-width: 15px;
+  -fx-border-color: #FFF;
+  @include normal-spacing;
+  @include rounded-background;
+  .text {
+    @include gray-text;
+  }
+}
+
+.dashboard-item {
+  -fx-border-width: 15px;
+  -fx-border-color: #DDD;
+  -fx-padding: 15px;
+  -fx-min-width: 200px;
+  -fx-background-color: white;
+  -fx-background-insets: 10px;
+  @include clip
+}
+
+.cell {
+  -fx-alignment: center;
+}
+
+.store-balance {
+  -fx-font-family: "Open Sans Semibold";
+  @include gray-text;
+}
+
+.store-address {
+  -fx-font-family: "Open Sans Light";
+  @include gray-text;
+  -fx-font-style: italic;
+}
+
+.total-balance {
+  -fx-font-family: "Open Sans Semibold";
+  @include bigger-text;
+  -fx-text-fill: $green-darker;
+}
+
+.big-label {
+  -fx-font-family: "Open Sans Semibold";
+  @include big-text;
+  @include gray-text;
+  -fx-padding: -10px 0 0 0;
+}
+
+.green-button {
+  -fx-font-family: "Open Sans";
+  @include big-text;
+  -fx-text-fill: white;
+  -fx-background-color: $green-lighter;
+  &:hover {
+    -fx-background-color: $green-primary;
+  }
+  &:armed {
+    -fx-background-color: $green-darker;
+  }
+}
+
+.back-button {
+  -fx-font-family: "Open Sans";
+  @include big-text;
+  -fx-text-fill: white;
+  -fx-background-color: $red-lighter;
+  &:hover {
+    -fx-background-color: $red-primary;
+  }
+  &:armed {
+    -fx-background-color: $red-darker;
+  }
+}
+
+.table-view {
+  -fx-padding: 0px;
+  -fx-font-family: "Open Sans";
+}
+
+.table-view .column-header-background {
+  -fx-background-color: #DDD;
+}
+
+.table-view .column-header-background .label {
+  -fx-background-color: transparent;
+  @include light-text
+}
+
+.table-view .column-header {
+  -fx-background-radius: 15px 15px 0 0;
+  -fx-border-radius: 15px 15px 0 0;
+  -fx-background-color: $blue-primary;
+}
+
+.table-view .filler {
+  -fx-background-color: transparent;
+}
+
+.store-panel {
+  -fx-background-color: white;
+}
+
+.store-menu-items {
+  -fx-alignment: top-center;
+  -fx-text-alignment: center;
+  -fx-padding: 20px 0;
+  -fx-label-padding: 10px;
+  .toggle-button {
+    @include dark-text;
+    @include small-text;
+    -fx-font-family: "Open Sans";
+    @include rounded-background;
+    -fx-text-fill: white;
+    -fx-min-width: 100px;
+    -fx-min-height: 75px;
+    -fx-max-width: 100px;
+    -fx-max-height: 75px;
+    -fx-alignment: center;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: $yellow-lighter;
+    &:hover {
+      -fx-background-color: $yellow-primary;
+    }
+    &:armed {
+      -fx-font-size: 11px;
+      -fx-background-color: $yellow-darker;
+    }
+    &:selected {
+      -fx-font-size: 11px;
+      -fx-background-color: $yellow-primary;
+      -fx-border-color: lighten($yellow-primary, 10%);
+      -fx-border-width: 2px;
+      -fx-border-radius: 13px;
+    }
+  }
+}
+
+.sandwich-builder-wrapper {
+  -fx-background-color: white;
+  -fx-alignment: top-center;
+}
+
+.sandwich-builder-button-grid {
+  -fx-alignment: center;
+  -fx-hgap: 10px;
+  -fx-vgap: 10px;
+}
+
+.add-ingredient-button {
+  @include strict-size-region(150px, 30px)
+}
+
+.ingredient {
+  -fx-background-color: $blue-lighter;
+  &:hover {
+    -fx-background-color: $blue-primary;
+  }
+  &:armed {
+    -fx-background-color: $blue-darker;
+  }
+}
+
+.bread {
+  -fx-background-color: $yellow-lighter;
+  &:hover {
+    -fx-background-color: $yellow-primary;
+  }
+  &:armed {
+    -fx-background-color: $yellow-darker;
+  }
+}
+
+.sandwich-ingredient-graphic {
+  -fx-font-family: "Open Sans";
+  @include small-text;
+  @include gray-text;
+  -fx-spacing: 5px;
+  -fx-alignment: center;
+  -fx-text-alignment: left;
+  -fx-wrap-text: true;
+}
+
+.sandwich-builder-ingredients-header {
+  -fx-font-family: "Open Sans Semibold";
+  @include big-text;
+  @include gray-text;
+  -fx-alignment: center;
+  -fx-padding: 15px;
+}
+
+.sandwich-builder-ingredients {
+  @include clip;
+  -fx-font-family: "Open Sans";
+  -fx-background-insets: 0px;
+  -fx-padding: 0px;
+  -fx-alignment: center;
+  -fx-pref-width: 900px;
+  -fx-pref-height: 900px;
+}
+
+.ingredient-list-item {
+  -fx-background-color: transparent;
+}
+
+.ingredient-list-item-ingredient {
+  -fx-background-color: transparent;
+  &:filled:hover {
+    -fx-background-color: $red-lighter;
+  }
+}
+
+.builder-input-wrapper {
+  -fx-padding: 0px;
+  @include strict-size-region(400px, 500px)
+}
+
+.builder-output-wrapper {
+  -fx-padding: 0px;
+  @include strict-size-region(450px, 500px)
+}
+
+.list-view {
+  .list-cell {
+    @include clip;
+    &:odd {
+      -fx-background-color: #fcfcfc;
+    }
+    &:even {
+      -fx-background-color: #f9f9f9;
+    }
+    &:empty {
+      -fx-background-color: transparent;
+    }
+
+  }
+  .scroll-bar:vertical {
+    -fx-padding: 0px;
+    -fx-scale-x: 0;
+    .increment-arrow,
+    .decrement-arrow,
+    .increment-button,
+    .decrement-button {
+      -fx-padding: 0px;
+      -fx-scale-x: 0;
+    }
+  }
+}
